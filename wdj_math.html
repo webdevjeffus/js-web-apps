@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>webdevjeffus | Mathemagic</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,800,400|Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/wdj_normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/wdj_math.css">
+    <!-- link rel="stylesheet" href="css/***page-specific.css***" -->
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+    
+     
+    
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    
+    
+    <!-- ======================== BEGIN PAGE CONTENT ========================= -->
+    
+    <div class="wrapper">
+      
+        <article>
+        
+            <div class="main-column">
+        
+                <h1 class="main-column__content  navbar__target">Mathemagic Multiplication!</h1>
+                
+                <div id="endGameBox" class="end_game_box" onclick="hideBox('endGameBox')">
+                
+                    <h2 id="endGameHead">Well done, Mathemagician!</h2>
+                    <p id="endGameText">Farm-to-table chia cliche typewriter, Kickstarter vinyl gastropub shabby chic butcher American Apparel 8-bit.</p>
+                
+                </div>
+                
+                <div id="streakBox" class="streak_box" onclick="hideBox('streakBox')">
+                
+                    <h2 id="streakHead">Congratulations, Mathemagician!</h2>
+                    <p id="streakText">Farm-to-table chia cliche typewriter, Kickstarter vinyl gastropub shabby chic butcher American Apparel 8-bit.</p>
+                
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                <div id="mathQuizBox" class="math_quiz_box">
+                
+                    <div class="familyBtns">
+                    
+                        <p>Fact Sets</p>
+                
+                        <div id="familyBtn1" class="familyBtn" onclick="prepareFamily(1)">1</div>
+                        <div id="familyBtn2" class="familyBtn" onclick="prepareFamily(2)">2</div>
+                        <div id="familyBtn3" class="familyBtn" onclick="prepareFamily(3)">3</div>
+                        <div id="familyBtn4" class="familyBtn" onclick="prepareFamily(4)">4</div>
+                        <div id="familyBtn5" class="familyBtn" onclick="prepareFamily(5)">5</div>
+                        <div id="familyBtn6" class="familyBtn" onclick="prepareFamily(6)">6</div>
+                        <div id="familyBtn7" class="familyBtn" onclick="prepareFamily(7)">7</div>
+                        <div id="familyBtn8" class="familyBtn" onclick="prepareFamily(8)">8</div>
+                        <div id="familyBtn9" class="familyBtn" onclick="prepareFamily(9)">9</div>
+                        <div id="familyBtn10" class="familyBtn" onclick="prepareFamily(10)">10</div>
+                    
+                    </div>
+                
+                    <h2 id="practisingHead">Now practicing 0x facts</h2>
+                
+                    <div class="current_challenge">
+                    
+                        <div id="reportResult" class="report_result">
+                            <p>Are you ready<br>to multiply by 0?</p>
+                        </div>
+
+                        <form id="userInput">
+                            
+                            <input  id="userAnswer" 
+                                    class="current_fact_answer" 
+                                    type="number">
+                            </input>
+                            
+                            <div id="currentFact" class="current_fact">0 x 0 = </div>
+                            <div class="clearfix"></div>
+                            <div class="button_center">
+                                <button id="submitBtn" class="submit_btn" type="button" onclick="evaluateAnswer(this.form)">Submit</button>
+                            </div>
+                        
+                        </form>
+                        
+                        <div class="clearfix"></div>
+                    
+                    </div>
+                    
+                    <div class="factorBtns">
+                    
+                        <p>Factors</p>
+                
+                        <div id="factorBtn1" class="factorBtn">1</div>
+                        <div id="factorBtn2" class="factorBtn">2</div>
+                        <div id="factorBtn3" class="factorBtn">3</div>
+                        <div id="factorBtn4" class="factorBtn">4</div>
+                        <div id="factorBtn5" class="factorBtn">5</div>
+                        <div id="factorBtn6" class="factorBtn">6</div>
+                        <div id="factorBtn7" class="factorBtn">7</div>
+                        <div id="factorBtn8" class="factorBtn">8</div>
+                        <div id="factorBtn9" class="factorBtn">9</div>
+                        <div id="factorBtn10" class="factorBtn">10</div>
+                        
+                    </div>
+                    
+                    <div class="strikeBtns">
+                    
+                        <p>Strikes</p>
+                        
+                        <div class="clearfix"></div>
+                        
+                        <div id="strikeBtn1" class="strikeBtn">
+                            <span class="up3px">X</span>
+                        </div>
+                        <div id="strikeBtn2" class="strikeBtn">
+                            <span class="up3px">X</span>
+                        </div>
+                        <div id="strikeBtn3" class="strikeBtn">
+                            <span class="up3px">X</span>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                
+                </div>
+                
+                
+            
+            </div>
+            
+            <aside>
+            
+                <h3>Instructions</h3>
+                
+                <p><em>Mathemagic Multiplication</em> is a multiplication-facts practice game. The computer will offer you a fact set to start with, but you can choose another set by clicking a blue <b>Fact Set</b> button. Type your answer in the white box, and click <b>Submit</b> to enter it into the computer.</p>
+                <p>You must solve all ten facts in a set before moving on to another set. The facts you've gotten right will be marked with green in the <b>Factors</b> box. When you make a mistake, the <b>Factor</b> will be marked red, and you will receive one <b>Strike</b>. If you receive three <b>Strikes</b>, you're out, and you'll have to start a new fact set.</p>
+                
+                <h3>About the app</h3>
+                
+                <p>This JavaScript application is currently under final testing. It is fully functional, but may still contain a few bugs. If you encounter any errors, <a href="mailto:webdevjeffus@gmail.com">please email me.</a> Thanks.</p>
+            
+            </aside>
+            
+        </article>
+        
+        <div class="clearfix"></div>
+        
+        
+
+    </div> <!-- Close div.wrapper -->
+    
+    <!-- ========================= END PAGE CONTENT ========================== -->
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/wdj_main.js"></script>
+    <script src="js/wdj_math.js"></script>
+    <!-- script src="js/***page-specific.js***"></script -->
+    
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+    -->
+</body>
+</html>
