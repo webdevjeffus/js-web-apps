@@ -1,0 +1,371 @@
+/*
+
+.wrapper {
+	width: 1000px;
+}
+
+.main-column {
+	width: 640px;
+	float: left;
+}
+
+aside {
+
+	width: 320px;
+	float: right;
+	padding: 12px;
+	background-color: #dddddd;
+	border: 2px black solid;
+
+}
+
+/********************************************************************/
+
+.end_game_box {
+    width: 500px;
+    height: 260px;
+    background-color: yellow;
+    border: 2px rgba(61, 61, 42, 1) solid;
+    box-shadow: 8px 8px 10px rgba(64, 64, 64, 0.75);
+    padding: 0 16px 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: 46px;
+    z-index: 10;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.end_game_box h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.end_game_box p {
+    font-size: 1.4rem;
+}
+
+.streak_box {
+    width: 500px;
+    height: 260px;
+    background-color: gold;
+    border: 2px rgba(61, 61, 42, 1) solid;
+    box-shadow: 8px 8px 10px rgba(64, 64, 64, 0.75);
+    padding: 0 16px 16px;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: 46px;
+    z-index: 10;
+    visibility: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.streak_box h2 {
+    margin-top: 16px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.streak_box p {
+    font-size: 1.4rem;
+}
+
+.button_center {
+    text-align: center;
+}
+
+.submit_btn {
+    width: 125px;
+    background-color: rgba(20, 87, 145, 1);
+    color: white;
+    border: 2px solid rgba(61, 61, 42, 1);
+    margin: 12px auto;
+}
+
+button.submit_btn :hover{
+    border: 2px solid rgba(122, 122, 84, 1);
+}
+
+.math_quiz_box {
+
+    width: 100%;
+    padding: 8px;
+    background-color: #eeeeee;
+    border: 2px solid rgba(61, 61, 42, 1);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(64, 64, 64, 0.75);
+    margin-bottom: 16px;
+
+}
+
+.math_quiz_box h2 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.math_quiz_box p {
+    font-size: 1.25rem;
+}
+
+.setBtns {
+    width: 100%;
+    height: 100px;
+    padding: 0 12px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: white;
+    border: 1px solid rgba(61, 61, 42, 1);
+    border-radius: 10px;
+}
+
+
+.setBtns p {
+    margin: 4px;
+}
+
+
+.setBtn {
+    width: 9%;
+    margin: 0 .5% 12px;
+    float: left;
+    background-color: rgba(20, 87, 145, 1);
+    color: white;
+    font-size: 1.8rem;
+    border: 1px solid rgba(61, 61, 42, 1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.factorBtns {
+    width: 65%;
+    height: 82px;
+    margin: 12px auto 6px;
+    padding: 0 8px;
+    float: left;
+    border: 1px solid rgba(61, 61, 42, 1);
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.factorBtn {
+    width: 32px;
+    height: 32px;
+    padding: 1px 0;
+    margin: -8px 3px 0;
+    float: left;
+    font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgray;
+    color: white;
+    border: 1px solid rgba(61, 61, 42, 1);
+    border-radius: 50%;
+}
+
+.strikeBtns {
+    width: 25%;
+    height: 82px;
+    margin: 12px auto 6px;
+    padding: 0 8px;
+    float: right;
+    border: 1px solid rgba(61, 61, 42, 1);
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.strikeBtn {
+    width: 32px;
+    height: 32px;
+    margin: -8px 4px 0;
+    float: right;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-align: center;
+    background-color: rgba(166, 46, 46, 1);
+    color: white;
+    border: 2px solid rgba(61, 61, 42, 1);
+    visibility: hidden;
+}
+
+.up3px {
+    position: relative;
+    top: -2px;
+}
+
+.btnBGStart {
+    background-color: rgba(20, 87, 145, 1);
+}
+
+.btnBGActive {
+    background-color: gold;
+}
+
+.btnBGPass {
+    background-color: rgb(85, 107, 47);
+}
+
+.btnBGFail {
+    background-color: rgba(166, 46, 46, 1);
+}
+
+.current_challenge {
+    width: 340px;
+    margin: 0 auto;
+    /* background-color: yellow; */
+
+}
+
+.current_challenge button {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.report_result {
+    text-align: center;
+    font-weight: bold;
+}
+
+.button_spacer {
+    width: 120px;
+    height: 40px;
+    float: left;
+    /* background-color: yellow; */
+}
+
+.current_fact,
+.current_fact_answer {
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.current_fact_answer {
+
+    width: 110px;
+    margin-left: 8px;
+    margin-right: 16px;
+    text-align: center;
+
+}
+
+/***************************************************************\
+
+Media Queries for responsive design,
+specific to page
+
+\***************************************************************/
+
+
+@media only screen and (max-width: 999px) {
+
+    .setBtn {
+        font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+    }
+
+    .factorBtns {
+        width: 65%;
+        height: 72px;
+        margin: 12px auto 6px;
+        padding: 0 6px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .factorBtn {
+        width: 25px;
+        height: 25px;
+        padding: 0 0;
+        margin: -8px 1px 0;
+        font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+    }
+
+    .strikeBtns {
+        width: 25%;
+        height: 72px;
+        margin: 12px auto 6px;
+        padding: 0 6px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    
+    .strikeBtn {
+        width: 25px;
+        height: 25px;
+        margin: -8px 1px 0;
+        float: right;
+        font-size: 1.1rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+    
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .end_game_box {
+
+    width: 380px;
+    height: 320px;
+    position: absolute;
+    margin-left: -190px;
+    }
+    
+    .streak_box {
+
+    width: 380px;
+    height: 320px;
+    position: absolute;
+    margin-left: -190px;
+    }
+    
+    .factorBtns {
+        width: 70%;
+        height: 72px;
+        margin: 12px auto 6px;
+        padding: 0 6px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .factorBtn {
+        width: 25px;
+        height: 25px;
+        padding: 0 0;
+        margin: -8px 1px 0;
+        font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
+        font-size: 1rem;
+    }
+
+    .strikeBtns {
+        width: 28%;
+        height: 72px;
+        margin: 12px auto 6px;
+        padding: 0 6px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    
+    .strikeBtn {
+        width: 25px;
+        height: 25px;
+        margin: -8px 1px 0;
+        float: right;
+        font-size: 1.1rem;
+    }
+    
+}
